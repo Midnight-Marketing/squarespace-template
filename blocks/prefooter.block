@@ -1,0 +1,7 @@
+<section id="Prefooter" class="Prefooter">
+
+  <div class="Prefooter-inner">
+    <squarespace:block-field id="Prefooter-blocks" class="Prefooter-blocks" columns="12" label="Prefooter" />
+  </div>
+
+</section>

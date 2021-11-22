@@ -1,0 +1,26 @@
+// MIXINS
+@fontFolder: "/assets/fonts";
+
+.font-face-ttf(@font-family, @filepath, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{fontFolder}@{filepath}.ttf") format("truetype");
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+
+.font-face-otf(@font-family, @filepath, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{fontFolder}@{filepath}.otf") format("opentype");
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+
+// FONT DECLARATIONS
+
+// Example declaration
+// .font-face-otf("Bio Sans", "/biosans/BioSans-Regular", 400, normal);
+

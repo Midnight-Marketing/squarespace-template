@@ -1,0 +1,20 @@
+
+      </div>{# end of Site-inner }
+
+      {@|apply prefooter.block}
+      {@|apply footer.block}
+
+    </div>
+
+    {# Non-combined scripts }
+    <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="jquery.js" combo="false" />
+    <squarespace:script src="modules/plugin-video-lightbox.js" combo="false" />
+
+    {# Combined Scripts}
+    <squarespace:script src="modules/example-module.js" combo="true" /> {# This should be replaced with your own modules }
+    <squarespace:script src="inits.js" combo="true" />
+
+    {squarespace-footers}
+  </body>
+</html>

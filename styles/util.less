@@ -1,5 +1,40 @@
 // =======================================================
 
+//    Custom Variables
+
+// =======================================================
+
+// CSS Variables
+:root {
+  --theme-color-main: @tweak-theme-color-main;
+  --theme-color-secondary: @tweak-theme-color-secondary;
+  --contact-padding: 45px;
+  --shadow: fade(#000, 12%);
+
+  --form-background-color: #F7F9FC;
+  --form-input-spacing: 10px;
+  --form-font-color: #B5B5B5;
+  --form-border-color: #C3D3E3;
+  --footer-contact-spacing: 30px;
+  --footer-icon-top-adjust: 3px;
+
+  --mobile-tab-height: 95vh;
+
+  @media @mobile {
+    --contact-padding: 17px;
+  }
+}
+
+// Media Breakpoints (Common)
+@desktopL: ~"screen and (min-width: 1921px)";
+@desktop: ~"screen and (max-width: 1920px)";
+@laptop: ~"screen and (max-width: 1280px)";
+@tablet: ~"screen and (max-width: 768px)";
+@mobile: ~"screen and (max-width: 640px)";
+@mobileS: ~"screen and (max-width: 428px)";
+
+// =======================================================
+
 //    Animations
 
 // =======================================================
@@ -26,6 +61,23 @@
 }
 @-webkit-keyframes anim-opacity-99 { .anim-opacity-99; }
 @keyframes anim-opacity-99 { .anim-opacity-99; }
+
+
+// =======================================================
+
+//    Show/Hide
+
+// =======================================================
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.display(@param) {
+  display: @param;
+  visibility: visible;
+}
 
 
 // =======================================================

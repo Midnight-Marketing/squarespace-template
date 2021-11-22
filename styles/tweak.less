@@ -21,6 +21,19 @@
 // tweak: { "category" : "Site", "label" : "Icons", "title" : "tweak-icon-weight", "type" : "dropdown", "options" : [ "Hairline", "Light", "Medium", "Heavy" ], "default" : "Hairline", "target" : ".Icon", "showOnlyWhenPresent" : ".Icon" }
 
 
+// =======================================================
+
+//    Theme
+
+// =======================================================
+
+// tweak: { "category" : "Theme", "label" : "Main Color ", "title" : "tweak-theme-color-main", "type" : "color", "disableTransparency" : "false" }
+@tweak-theme-color-main: #14295A;
+
+// tweak: { "category" : "Theme", "label" : "Secondary Color ", "title" : "tweak-theme-color-secondary", "type" : "color", "disableTransparency" : "false" }
+@tweak-theme-color-secondary: #027AF5;
+
+
 // -----------------------------------------
 
 //  Border
@@ -441,7 +454,7 @@
 // tweak: { "category" : "Main: Overlay", "label" : "Parallax Smart Crop", "title" : "tweak-overlay-parallax-new-math", "type" : "checkbox", "active" : false, "js" : true, "target" : ".Index-page--has-image, .Intro--has-image", "showOnlyWhenPresent" : ".tweak-overlay-parallax-enabled .Index-page--has-image, .tweak-overlay-parallax-enabled .Intro--has-image" }
 
 // tweak: { "category" : "Main: Overlay", "label" : "Overlay Color", "title" : "tweak-overlay-color", "type" : "color", "target" : ".Index-page--has-image, .Intro--has-image", "showOnlyWhenPresent" : ".Index-page--has-image, .Intro--has-image" }
-@tweak-overlay-color: rgba(0,0,0,0.3);
+@tweak-overlay-color: rgba(0, 0, 0, 0.3);
 
 
 
@@ -588,7 +601,7 @@
 // tweak: { "category" : "Index: Gallery", "label" : "Hover Style", "title" : "tweak-index-gallery-hover-style", "type" : "dropdown", "options" : [ "Plain", "Fade" ], "default" : "Plain", "target" : ".Index-gallery-item", "showOnlyWhenPresent" : ".Index-gallery" }
 
 // tweak: { "category" : "Index: Gallery", "label" : "Image Overlay", "title" : "tweak-index-gallery-image-overlay-color", "type" : "color", "target" : ".Index-gallery-item", "showOnlyWhenPresent" : ".Index-gallery" }
-@tweak-index-gallery-image-overlay-color: rgba(0,0,0,0.3);
+@tweak-index-gallery-image-overlay-color: rgba(0, 0, 0, 0.3);
 
 
 
@@ -675,7 +688,7 @@
 // tweak: { "category" : "Index: Gallery Content", "label" : "Content Text Alignment", "title" : "tweak-index-gallery-content-text-alignment", "type" : "dropdown", "options" : [ "Left", "Center", "Right" ], "default" : "Left", "target" : ".Index-gallery-item-content, .Index-gallery-item", "showOnlyWhenPresent" : ".Index-gallery-item-content" }
 
 // tweak: { "category" : "Index: Gallery Content", "label" : "Content Background", "title" : "tweak-index-gallery-content-background-color", "type" : "color", "target" : ".Index-gallery-item-content, .Index-gallery-item", "showOnlyWhenPresent" : ".Index-gallery-item-content" }
-@tweak-index-gallery-content-background-color: rgba(255,255,255,1);
+@tweak-index-gallery-content-background-color: rgba(255, 255, 255, 1);
 
 // tweak: { "category": "Index: Gallery Content", "label" : "Title Font", "title" : "tweak-index-gallery-content-heading-font", "type" : "font", "target" : ".Index-gallery-item-content", "showOnlyWhenPresent" : ".Index-gallery-item-content" }
 .tweak-index-gallery-content-heading-font {
@@ -826,7 +839,7 @@
 
 // tweak: { "category" : "Footer", "label" : "Show Footer", "title" : "tweak-footer-show", "type" : "checkbox", "active" : true, "target" : ".Footer" }
 
-// tweak: { "category" : "Footer", "label" : "Layout", "title" : "tweak-footer-layout", "type" : "dropdown", "options" : [ "Stacked", "Columns" ], "default" : "Stacked", "target" : ".Footer", "showOnlyWhenPresent": ".tweak-footer-show", "js" : true }
+// tweak: { "category" : "Footer", "label" : "Layout", "title" : "tweak-footer-layout", "type" : "dropdown", "options" : [ "Stacked", "Columns", "Flex" ], "default" : "Stacked", "target" : ".Footer", "showOnlyWhenPresent": ".tweak-footer-show", "js" : true }
 
 // tweak: { "category" : "Footer", "label" : "Auto Width Columns", "title" : "tweak-footer-layout-columns-auto", "type" : "checkbox", "active" : true, "target" : ".Footer", "showOnlyWhenPresent": ".tweak-footer-show.tweak-footer-layout-columns" }
 
@@ -973,7 +986,7 @@
 @tweak-footer-link-color: #ffffff;
 
 // tweak: { "category" : "Footer Content: Colors", "label" : "Lines", "title" : "tweak-footer-line-color", "type" : "color", "target" : ".Footer .sqs-block-horizontalrule, .Footer .sqs-block-html blockquote, .Footer .sqs-block-markdown blockquote", "showOnlyWhenPresent" : ".tweak-footer-show .Footer .sqs-block-horizontalrule, .tweak-footer-show .Footer .sqs-block-html blockquote, .tweak-footer-show .Footer .sqs-block-markdown blockquote" }
-@tweak-footer-line-color: rgba(255,255,255,0.2);
+@tweak-footer-line-color: rgba(255, 255, 255, 0.2);
 
 
 
@@ -1262,4 +1275,3 @@
   line-height: 1.6em;
   text-transform: none;
 }
-
