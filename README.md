@@ -115,28 +115,30 @@ To get a local copy up and running follow these simple steps.
 
    1. Go to **Settings** -> **Domains** -> **Built-In Domain** and make a new subdomain.
    
-   2. *I typically set the domain as **mm-company_name***  
+      1. *I typically set the domain as **mm-company_name***
+
+   2. Create a GitHub repo to backup the source files
+
+      1. *I typically set the repo name as the **company_name** used for the custom domain.* 
 
 3. Turn on Developer Mode
 
    1. Found in **Settings** -> **Advanced** -> **Developer Mode**
 
-4. Create a repo in the Midnight Marketing GitHub
-
-5. Replace the default template with these files.
+4. Replace the default template with these files.
 
    1. Start with updating this README.md in the root folder to update all the links to the  GitHub repo and Squarespace repo, as well as the site name and any other information from  the markdown links and images at the top of the file.
 
    2. If you're not using the static page option, delete the ``pages/static.page`` and ``pages/static.page.conf`` files.
 
-6. Update the repo information in the Squarespace repo
+5. Update the repo information in the Squarespace repo
 
    1. Add the GitHub repo as a push location  
       ```sh
       git remote set-url --add origin https://github.com/Midnight-Marketing/squarespace-template.git
       ```
 
-7. Push the updates and confirm everything is working as expected
+6. Push the updates and confirm everything is working as expected
    
 
 <!-- Install on an Existing Site -->
