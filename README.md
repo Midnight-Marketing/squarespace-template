@@ -7,7 +7,8 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- To replace these top three links, do a find and replace on the current text -->
+<!-- To replace these top four links, do a find and replace on the current text -->
+[main-dev-email]: mailto:nathan@midnightmarketing.com
 [site-url]: https://midnightmarketing.com
 [repo-url]: https://github.com/Midnight-Marketing/squarespace-template.git
 [site-repo-url]: https://mm-template.squarespace.com/template.git
