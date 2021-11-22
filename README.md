@@ -11,10 +11,10 @@
 
 <!-- 
     To replace these top five links, do a find and replace on the current text.
-    For the first one, use only the text characters, not the wrapping parantheses
+    For the first one, use only the text characters, not the wrapping comments
     -->
 
-[site-name]: # (Wright (Adapted) Template)
+<!-- Wright (Adapted) Template -->
 [site-url]: https://midnightmarketing.com
 [repo-url]: https://github.com/Midnight-Marketing/squarespace-template.git
 [site-repo-url]: https://mm-template.squarespace.com/template.git
