@@ -72,8 +72,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#new-site">Start a New Site</a></li>
-        <li><a href="#existing-site">Install on an Existing Site</a></li>
+        <li><a href="#start-a-new-site">Start a New Site</a></li>
+        <li><a href="#install-on-an-existing-site">Install on an Existing Site</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -87,7 +87,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project  {#about}
+## About The Project
 
 ![Wright (Adapated) Template][screenshot]  
 
@@ -111,7 +111,7 @@ To get a local copy up and running follow these simple steps.
 * Squarespace site running on 7.0[^v7]
 
 <!-- Start a New Site -->
-### Start a New Site {#new-site}
+### Start a New Site
 
 1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/)[^brine]
    
@@ -148,7 +148,7 @@ To get a local copy up and running follow these simple steps.
    
 
 <!-- Install on an Existing Site -->
-### Install on an Exisiting Site {#existing-site}
+### Install on an Exisiting Site
 
 1. Clone the repo
    ```sh
