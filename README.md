@@ -107,13 +107,18 @@ To get a local copy up and running follow these simple steps.
 <!-- Start a New Site -->
 ### Start a New Site
 
-1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/) *(ensures you're using 7.0)*
+1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/)
+   
+   1. *This ensures you're using 7.0*
 
 2. Set a custom Subdomain from Squarespace for ease-of-use
 
-   1. Go to **Settings** -> **Domains** -> **Built-In Domain** and make a new subdomain. *I typically set the domain as **mm-company_name***  
+   1. Go to **Settings** -> **Domains** -> **Built-In Domain** and make a new subdomain.
+   
+   2. *I typically set the domain as **mm-company_name***  
 
 3. Turn on Developer Mode
+
    1. Found in **Settings** -> **Advanced** -> **Developer Mode**
 
 4. Create a repo in the Midnight Marketing GitHub
