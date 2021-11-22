@@ -8,11 +8,17 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- To replace these top four links, do a find and replace on the current text -->
-[main-dev-email]: mailto:nathan@midnightmarketing.com
+
+<!-- 
+    To replace these top five links, do a find and replace on the current text.
+    For the first one, use only the text characters, not the wrapping parantheses
+    -->
+
+[site-name]: # (Wright (Adapted) Template)
 [site-url]: https://midnightmarketing.com
 [repo-url]: https://github.com/Midnight-Marketing/squarespace-template.git
 [site-repo-url]: https://mm-template.squarespace.com/template.git
+[main-dev-email]: mailto:nathan@midnightmarketing.com
 
 [contributors-shield]: https://img.shields.io/badge/Contributors-2-orange?style=for-the-badge
 [contributors-url]: https://github.com/Midnight-Marketing/squarespace-template/-/community_contributors
@@ -57,7 +63,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -66,8 +72,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#start-a-new-site">Start a New Site</a></li>
-        <li><a href="#install-on-an-exisiting-site">Install on an Existing Site</a></li>
+        <li><a href="#new-site">Start a New Site</a></li>
+        <li><a href="#existing-site">Install on an Existing Site</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -81,7 +87,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project  
+## About The Project  {#about}
 
 ![Wright (Adapated) Template][screenshot]  
 
@@ -102,12 +108,12 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 * Administrative access to Squarespace Backend
-* Squarespace site running on 7.0
+* Squarespace site running on 7.0[^v7]
 
 <!-- Start a New Site -->
-### Start a New Site
+### Start a New Site {#new-site}
 
-1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/)
+1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/)[^brine]
    
    1. *This ensures you're using 7.0*
 
@@ -142,7 +148,7 @@ To get a local copy up and running follow these simple steps.
    
 
 <!-- Install on an Existing Site -->
-### Install on an Exisiting Site
+### Install on an Exisiting Site {#existing-site}
 
 1. Clone the repo
    ```sh
@@ -198,3 +204,6 @@ Nathan Paynter - nathan@midnightmarketing.com
 * [Squarespace Developers](https://developers.squarespace.com/quick-start)
 * [SQSPThemes.com](https://www.sqspthemes.com)
 
+<!-- Footnotes -->
+[^v7]: All sites from the [Squarespace Template Page](https://www.squarespace.com/templates/) are built on 7.1 and do not have Developer Mode. To see other templates from 7.0, you can view [the older versions page](https://www.squarespace.com/templates/browse/v7).
+[^brine]: We use this template as the basis for this Developer Template. Transitioning has less risk with using the same template to start.
