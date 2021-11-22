@@ -37,7 +37,7 @@
   <h3 align="center">Wright (Adapted) Template</h3>
 
   <p align="center">
-    SquareSpace website template
+    Squarespace website template
     <br />
     <a href="https://github.com/Midnight-Marketing/squarespace-template"><strong>Explore the docs »</strong></a>
     <br />
@@ -66,7 +66,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#start-a-new-site">Start a New Site</a></li>
+        <li><a href="#install-on-an-exisiting-site">Install on an Existing Site</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -100,10 +101,41 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* Administrative access to SquareSpace Backend
-* SquareSpace site running on 7.0
+* Administrative access to Squarespace Backend
+* Squarespace site running on 7.0
 
-### Installation
+<!-- Start a New Site -->
+### Start a New Site
+
+1. Start a new site from the [Brine Template](https://brine-demo.squarespace.com/) *(ensures you're using 7.0)*
+
+2. Set a custom Subdomain from Squarespace for ease-of-use
+
+   1. Go to **Settings** -> **Domains** -> **Built-In Domain** and make a new subdomain. *I typically set the domain as **mm-company_name***  
+
+3. Turn on Developer Mode
+   1. Found in **Settings** -> **Advanced** -> **Developer Mode**
+
+4. Create a repo in the Midnight Marketing GitHub
+
+5. Replace the default template with these files.
+
+   1. Start with updating this README.md in the root folder to update all the links to the  GitHub repo and Squarespace repo, as well as the site name and any other information from  the markdown links and images at the top of the file.
+
+   2. If you're not using the static page option, delete the ``pages/static.page`` and ``pages/static.page.conf`` files.
+
+6. Update the repo information in the Squarespace repo
+
+   1. Add the GitHub repo as a push location  
+      ```sh
+      git remote set-url --add origin https://github.com/Midnight-Marketing/squarespace-template.git
+      ```
+
+7. Push the updates and confirm everything is working as expected
+   
+
+<!-- Install on an Existing Site -->
+### Install on an Exisiting Site
 
 1. Clone the repo
    ```sh
