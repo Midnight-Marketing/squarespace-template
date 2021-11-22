@@ -148,7 +148,7 @@ To get a local copy up and running follow these simple steps.
    
 
 <!-- Install on an Existing Site -->
-### Install on an Exisiting Site
+### Install on an Existing Site
 
 1. Clone the repo
    ```sh
