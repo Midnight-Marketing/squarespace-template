@@ -1,8 +1,9 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Contributors][contributors-shield]][contributors-url]
 [![Stars][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
+
+[Contributors currently not supported]: # ([![Contributors][contributors-shield]][contributors-url])
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -14,7 +15,7 @@
 [site-repo-url]: https://mm-template.squarespace.com/template.git
 
 [contributors-shield]: https://img.shields.io/badge/Contributors-2-orange?style=for-the-badge
-[contributors-url]: https://github.com/Midnight-Marketing/squarespace-template/-/project_members
+[contributors-url]: https://github.com/Midnight-Marketing/squarespace-template/-/community_contributors
 [stars-shield]: https://img.shields.io/badge/Stars-0-blue?style=for-the-badge
 [stars-url]: https://github.com/Midnight-Marketing/squarespace-template/-/starrers
 [issues-shield]: https://img.shields.io/badge/Issues-0-green?style=for-the-badge
