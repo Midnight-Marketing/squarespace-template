@@ -1,9 +1,10 @@
 function inits() {
   pluginVideoLightbox()
+  imgLoadInit()
 }
 
 function resizeInits() {
-  imageResize()
+  imageResizeInit()
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -15,5 +16,6 @@ window.addEventListener("resize", function() {
 })
 
 window.addEventListener("mercury:load", function() {
+  // Loading event for SS AJAX
   inits()
 })
