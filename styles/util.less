@@ -496,6 +496,18 @@
   -webkit-justify-content: flex-start; // Safari 7+
   justify-content: flex-start; // Modern browsers
 }
+.flex-justify-content (@string) when (@string = space-between) {
+  -webkit-box-pack: center; // Safari 6
+  -ms-flex-pack: center; // IE 10
+  -webkit-justify-content: space-between; // Safari 7+
+  justify-content: space-between; // Modern browsers
+}
+.flex-justify-content (@string) when (@string = space-around) {
+  -webkit-box-pack: center; // Safari 6
+  -ms-flex-pack: center; // IE 10
+  -webkit-justify-content: space-around; // Safari 7+
+  justify-content: space-around; // Modern browsers
+}
 .flex-justify-content (@string) when (@string = center) {
   -webkit-box-pack: center; // Safari 6
   -ms-flex-pack: center; // IE 10
