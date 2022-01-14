@@ -454,6 +454,12 @@
   -webkit-flex-direction: column; // Safari 7+
   flex-direction: column; // Modern browsers
 }
+.flex-direction (@string) when (@string = column-reverse) {
+  -webkit-box-orient: vertical; // Safari 6
+  -ms-flex-direction: column-reverse; // IE 10
+  -webkit-flex-direction: column-reverse; // Safari 7+
+  flex-direction: column-reverse; // Modern browsers
+}
 .flex-order (@num) {
   -webkit-box-ordinal-group: @num; // Safari 6
   -ms-flex-order: @num; // IE 10
@@ -533,6 +539,40 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.mask (@url: '', @size: cover, @pos: center center, @repeat: repeat) {
+  -webkit-mask-image: url(@url);
+  mask-image: url(@url);
+  -webkit-mask-size: @size;
+  mask-size: @size;
+  -webkit-mask-position: @pos;
+  mask-position: @pos;
+  -webkit-mask-repeat: @repeat;
+  mask-repeat: @repeat;
+}
+
+.filter (@string) {
+  -ms-filter: @string;
+  -webkit-filter: @string;
+  -moz-filter: @string;
+  -o-filter: @string;
+  filter: @string;
+}
+
+.filter2 (@string1, @string2) {
+  -ms-filter: @string1, @string2;
+  -webkit-filter: @string1, @string2;
+  -moz-filter: @string1, @string2;
+  -o-filter: @string1, @string2;
+  filter: @string1, @string2;
+}
+
+.filter3 (@string1, @string2, @string3) {
+  -ms-filter: @string1, @string2, @string3;
+  -webkit-filter: @string1, @string2, @string3;
+  -moz-filter: @string1, @string2, @string3;
+  -o-filter: @string1, @string2, @string3;
+  filter: @string1, @string2, @string3;
 }
 .transform (@string){
   -webkit-transform: @string;
