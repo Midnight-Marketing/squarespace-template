@@ -7,7 +7,11 @@ function imgResizeInit() {
 }
 
 
-function loadCustomImages(prop = '') {
+function loadCustomImages(prop) {
+  if ((prop === undefined) || (prop === null)) {
+    prop = ''
+  }
+
   var images = document.querySelectorAll('img[data-src]' + prop)
   for (var i = 0; i < images.length; i++) {
     ImageLoader.load(images[i], {
@@ -16,7 +20,11 @@ function loadCustomImages(prop = '') {
   }
 }
 
-function reloadCustomImages(prop = '') {
+function reloadCustomImages(prop) {
+  if ((prop === undefined) || (prop === null)) {
+    prop = ''
+  }
+
   var images = document.querySelectorAll('img[data-src]' + prop)
   for (var i = 0; i < images.length; i++) {
     ImageLoader.load(images[i], {
