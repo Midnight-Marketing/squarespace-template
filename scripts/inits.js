@@ -4,7 +4,7 @@ function inits() {
 }
 
 function resizeInits() {
-  imageResizeInit()
+  imgResizeInit()
 }
 
 document.addEventListener("DOMContentLoaded", function() {
