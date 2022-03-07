@@ -132,7 +132,8 @@
 
   .transition2 (border-color 0.15s ease-out, color 0.15s ease-out);
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: rgba(red(@color), green(@color), blue(@color), alpha(@color) * 0.6);
     border-color: rgba(red(@color), green(@color), blue(@color), alpha(@color) * 0.15);
   }
@@ -140,7 +141,8 @@
 .link-color (@color, @opacity: 1) {
   color: rgba(red(@color), green(@color), blue(@color), alpha(@color) * @opacity);
   .transition (color 0.15s ease-out);
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: rgba(red(@color), green(@color), blue(@color), alpha(@color) * @opacity * 0.5);
   }
 }
@@ -158,6 +160,27 @@
 .font-smoothing (@a) when (lightness(@a) >= 65%) {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
+}
+
+
+// -----------------------------------------
+
+//  Strokes
+
+
+.stroke (@w: 1px, @c: #000) {
+  -webkit-text-stroke: @w @c;
+  text-stroke: @w @c;
+}
+
+.stroke-color (@c: #000) {
+  -webkit-text-stroke-color: @c;
+  text-stroke-color: @c;
+}
+
+.stroke-width (@w: 0px) {
+  -webkit-text-stroke-width: @w;
+  text-stroke-width: @w;
 }
 
 
@@ -325,6 +348,17 @@
   // @media screen and (max-width: 480px) {
   //   .max-padding-top (@padding, @paddingXS);
   // }
+}
+.responsive-padding-top-large (@padding) {
+  @media screen and (max-width: 1024px) {
+    .max-padding-top (@padding, 180px);
+  }
+  @media screen and (max-width: 960px) {
+    .max-padding-top (@padding, 120px);
+  }
+  @media screen and (max-width: 640px) {
+    .max-padding-top (@padding, 60px);
+  }
 }
 .responsive-padding-right (@padding) {
   @media screen and (max-width: 1024px) {
@@ -580,6 +614,13 @@
   -ms-transform: @string;
   -o-transform: @string;
   transform: @string;
+}
+.transform-origin (@string){
+  -webkit-transform-origin: @string;
+  -moz-transform-origin: @string;
+  -ms-transform-origin: @string;
+  -o-transform-origin: @string;
+  transform-origin: @string;
 }
 .transition-webkit (@transition) {
   -webkit-transition: @transition;

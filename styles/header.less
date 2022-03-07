@@ -114,7 +114,7 @@
     background: transparent;
 
     // I would like the z-index here to be lower,
-    // but anything below 1000 makes causes dropdown menus 
+    // but anything below 1000 makes causes dropdown menus
     // to be hidden behind image galleries.
     z-index: 1000;
     width: 100%;
@@ -131,7 +131,7 @@
 }
 
 @media screen and (min-width: @tweak-mobile-breakpoint) {
-  
+
   .ancillary-header-branding-position-bottom-left,
   .ancillary-header-tagline-position-bottom-left.has-tagline,
   .ancillary-header-primary-nav-position-bottom-left.has-primary-nav,
@@ -236,6 +236,8 @@
   @folder-color:        @tweak-header-primary-nav-folder-color;
   @folder-link-color:   @tweak-header-primary-nav-folder-link-color;
   .mixin-header-nav-style(@option);
+  .mixin-header-nav-underline-style(@option);
+  .mixin-header-nav-stroke-style(@option);
 }
 .mixin-header-nav(@name, @colors, @option, @button-style: solid) when (@name = primary) and (@colors = overlay) {
   @link-color:          @tweak-header-overlay-primary-nav-link-color;
@@ -244,6 +246,8 @@
   @folder-color:        @tweak-header-overlay-primary-nav-folder-color;
   @folder-link-color:   @tweak-header-overlay-primary-nav-folder-link-color;
   .mixin-header-nav-style(@option);
+  .mixin-header-nav-underline-style(@option);
+  .mixin-header-nav-stroke-style(@option);
 }
 
 .mixin-header-nav(@name, @colors, @option, @button-style: solid) when (@name = secondary) and (@colors = regular) {
@@ -253,6 +257,8 @@
   @folder-color:        @tweak-header-secondary-nav-folder-color;
   @folder-link-color:   @tweak-header-secondary-nav-folder-link-color;
   .mixin-header-nav-style(@option);
+  .mixin-header-nav-underline-style(@option);
+  .mixin-header-nav-stroke-style(@option);
 }
 
 .mixin-header-nav(@name, @colors, @option, @button-style: solid) when (@name = secondary) and (@colors = overlay) {
@@ -262,6 +268,8 @@
   @folder-color:        @tweak-header-overlay-secondary-nav-folder-color;
   @folder-link-color:   @tweak-header-overlay-secondary-nav-folder-link-color;
   .mixin-header-nav-style(@option);
+  .mixin-header-nav-underline-style(@option);
+  .mixin-header-nav-stroke-style(@option);
 }
 
 .mixin-header-nav-style(@option) {
@@ -270,22 +278,92 @@
   .Header-nav-folder-item { color: @folder-link-color; }
 }
 .mixin-header-nav-style(@option) when (@option = fade) {
-  .Header-nav-item:hover { .alpha-color(@link-color, 0.4); }
-  .Header-nav-folder-item:hover { .alpha-color(@folder-link-color, 0.4); }
+  .Header-nav-item:hover,
+  .Header-nav-item:focus-visible { .alpha-color(@link-color, 0.4); }
+  .Header-nav-folder-item:hover,
+  .Header-nav-item:focus-visible { .alpha-color(@folder-link-color, 0.4); }
 }
 .mixin-header-nav-style(@option) when (@option = spotlight) {
-  &:hover .Header-nav-item { .alpha-color(@link-color, 0.4); }
-  &:hover .Header-nav-item:hover { color: @link-color; }
+  &:hover .Header-nav-item, &:focus-within .Header-nav-item { .alpha-color(@link-color, 0.4); }
+  &:hover .Header-nav-item:hover,
+  &:focus-within .Header-nav-item:focus-visible {
+    color: @link-color;
+  }
   .Header-nav-folder-item { .alpha-color(@folder-link-color, 0.4); }
-  .Header-nav-folder-item:hover { color: @folder-link-color; }
+  .Header-nav-folder-item:hover,
+  .Header-nav-folder-item:focus-visible { color: @folder-link-color; }
 }
 .mixin-header-nav-style(@option) when (@option = active) {
-  .Header-nav-item:hover { color: @active-link-color; }
-  .Header-nav-folder-item:hover { color: @active-link-color; }
+  .Header-nav-item:hover, .Header-nav-item:focus-visible { color: @active-link-color; }
+  .Header-nav-folder-item:hover,
+  .Header-nav-folder-item:focus-visible { color: @active-link-color; }
   .Header-nav-item--active,
   .Header-nav-folder-title--active,
   .Header-nav-folder-item--active {
     color: @active-link-color;
+  }
+}
+
+.mixin-header-nav-underline-style(@option) when (@option = fade) {
+  .Header-nav-item--active:hover:after,
+  .Header-nav-item--active:focus-visible:after { background-color: @tweak-header-general-nav-link-underline-hover-color; }
+
+  .Header-nav-folder-item--active:hover:after,
+  .Header-nav-folder-item--active:focus-visible:after {
+    background-color: @tweak-header-general-nav-link-underline-hover-color;
+  }
+}
+.mixin-header-nav-underline-style(@option) when (@option = spotlight) {
+  &:hover .Header-nav-item--active:after,
+  &:focus-within .Header-nav-item--active:after { background-color: @tweak-header-general-nav-link-underline-hover-color }
+  &:hover .Header-nav-item:hover:after,
+  &:focus-within .Header-nav-item:focus-visible:after { background-color: @tweak-header-general-nav-link-underline-color; }
+}
+.mixin-header-nav-underline-style(@option) when (@option = active) {
+  .Header-nav-item:hover:after,
+  .Header-nav-item:focus-visible:after { background-color: @tweak-header-general-nav-link-underline-hover-color; }
+  .Header-nav-folder-item:hover:after,
+  .Header-nav-folder-item:focus-visible:after { background-color: @tweak-header-general-nav-link-underline-hover-color; }
+  .Header-nav-item--active:after,
+  .Header-nav-folder-title--active:after,
+  .Header-nav-folder-item--active:after {
+    background-color: @tweak-header-general-nav-link-underline-hover-color;
+  }
+}
+
+.mixin-header-nav-stroke-style(@option) when (@option = fade) {
+  .Header-nav-item { .stroke-color(transparent); }
+  .Header-nav-item--active { .stroke-color(@link-color); }
+
+  .Header-nav-item--active:hover,
+  .Header-nav-item--active:focus-visible,
+  .Header-nav-item:hover,
+  .Header-nav-item:focus-visible,
+  .Header-nav-folder-item:hover,
+  .Header-nav-folder-item:focus-visible { .stroke-color(fade(@link-color, 40%)); }
+}
+.mixin-header-nav-stroke-style(@option) when (@option = spotlight) {
+  .Header-nav-item { .stroke-color(transparent); }
+  .Header-nav-item--active { .stroke-color(@link-color); }
+
+  &:hover .Header-nav-item--active,
+  &:focus-within .Header-nav-item--active { .stroke-color(fade(@link-color, 40%));}
+  &:hover .Header-nav-item:hover,
+  &:focus-within .Header-nav-item:focus-visible,
+  &:hover .Header-nav-item--active:hover,
+  &:focus-within .Header-nav-item--active:focus-within { .stroke-color(@link-color); }
+}
+.mixin-header-nav-stroke-style(@option) when (@option = active) {
+  .Header-nav-item { .stroke-color(transparent); }
+
+  .Header-nav-item:hover,
+  .Header-nav-item:focus-visible,
+  .Header-nav-folder-item:hover,
+  .Header-nav-folder-item:focus-visible,
+  .Header-nav-item--active,
+  .Header-nav-folder-title--active,
+  .Header-nav-folder-item--active {
+    .stroke-color(@active-link-color);
   }
 }
 
@@ -308,7 +386,8 @@
     background-color: @link-color;
     .font-smoothing(@link-color);
     color: @button-text-color;
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: fade(@link-color, 80%);
     }
   }
@@ -319,7 +398,8 @@
     box-shadow: none;
     border: 2px solid @link-color;
     color: @link-color;
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: @link-color;
       color: @button-text-color;
     }
@@ -335,7 +415,8 @@
     background-color: @link-color;
     .font-smoothing(@link-color);
     color: @button-text-color;
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: @lightened-link-color;
     }
     &:active {
@@ -375,7 +456,8 @@
 .mixin-header-nav-button-shape(@shape) when (@shape = rounded) {
   .Header-nav-item {
     border-radius: 3px;
-    &--folder:hover {
+    &--folder:hover,
+    &--folder:focus-visible {
       border-radius: 3px 3px 0 0;
     }
   }
@@ -396,7 +478,12 @@
 
   &-item,
   &-folder-item {
+    .stroke-width(0px);
     .transition(~"color 170ms ease-in-out, background-color 170ms ease-in-out");
+
+    body.tweak-header-general-nav-bold-on-hover & {
+      .transition(~"color 170ms ease-in-out, background-color 170ms ease-in-out, -webkit-text-stroke-color 170ms ease-in-out, text-stroke-color 170ms ease-in-out");
+    }
   }
 
   &-item {
@@ -434,7 +521,8 @@
 
   }
 
-  &-item--folder:hover &-folder {
+  &-item--folder:hover &-folder,
+  &-item--folder:focus-visible &-folder {
     left: 0;
     opacity: 1;
     .transform(translate3d(0, 0, 0));
@@ -670,7 +758,8 @@ body:not(.tweak-header-secondary-nav-inherit-styles) .Header-nav--secondary { .t
 .tweak-header-primary-nav-hover-style-button {
   .Header-nav--primary .Header-nav-item,
   &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
-    padding: 12px 18px;
+    // padding: 12px 18px;
+    padding: 12px 18px 6px; // Offset bottom padding to vertically center font
     margin: 0.618em @tweak-header-primary-nav-link-spacing;
   }
 }
@@ -678,19 +767,81 @@ body:not(.tweak-header-primary-nav-hover-style-button) {
   .Header-nav--primary .Header-nav-item,
   &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
     margin: 0 @tweak-header-primary-nav-link-spacing;
-    padding: 0.618em 0;
+    // padding: 0.618em 0;
+    padding: 0.618em 0 0.218em; // Offset bottom padding to vertically center font
   }
-}
-.tweak-header-secondary-nav-hover-style-button:not(.tweak-header-secondary-nav-inherit-styles) {
-  .Header-nav--secondary .Header-nav-item {
-    padding: 12px 18px;
-    margin: 0.618em @tweak-header-secondary-nav-link-spacing;
+
+  &.tweak-header-general-nav-link-underline {
+    .Header-nav--primary .Header-nav-item,
+    &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: @tweak-header-general-nav-link-underline-width;
+        height: @tweak-header-general-nav-link-underline-height;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        .transition(background-color 170ms ease-in-out);
+      }
+
+      &--active {
+        &:after {
+          background-color: @tweak-header-general-nav-link-underline-color;
+        }
+      }
+    }
+  }
+
+  &.tweak-header-general-nav-bold-on-hover {
+    .Header-nav--primary .Header-nav-item,
+    &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
+      .stroke-width(@tweak-header-general-nav-bold-on-hover-amount);
+    }
   }
 }
 body:not(.tweak-header-secondary-nav-hover-style-button):not(.tweak-header-secondary-nav-inherit-styles) {
   .Header-nav--secondary .Header-nav-item {
     margin: 0 @tweak-header-secondary-nav-link-spacing;
-    padding: 0.618em 0;
+    // padding: 0.618em 0;
+    padding: 0.618em 0 0.218em; // Offset bottom padding to vertically center font
+  }
+
+  &.tweak-header-general-nav-link-underline {
+    .Header-nav--secondary .Header-nav-item {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: @tweak-header-general-nav-link-underline-width;
+        height: @tweak-header-general-nav-link-underline-height;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        .transition(background-color 170ms ease-in-out);
+      }
+
+      &--active {
+        &:after {
+          background-color: @tweak-header-general-nav-link-underline-color;
+        }
+      }
+    }
+  }
+
+  &.tweak-header-general-nav-bold-on-hover {
+    .Header-nav--secondary .Header-nav-item {
+      .stroke-width(@tweak-header-general-nav-bold-on-hover-amount);
+    }
   }
 }
 
@@ -713,7 +864,8 @@ body:not(.tweak-header-secondary-nav-hover-style-button):not(.tweak-header-secon
     // on parent submit
     stroke: rgba(red(@icon-color), green(@icon-color), blue(@icon-color), 1);
   }
-  .Header-search-form-submit:hover { opacity: alpha(@icon-color); }
+  .Header-search-form-submit:hover,
+  .Header-search-form-submit:focus-visible { opacity: alpha(@icon-color); }
 }
 .mixin-header-search(@option, @text-color, @icon-color, @border-color, @background-color) when (@option = underlined) {
   .Header-search {
