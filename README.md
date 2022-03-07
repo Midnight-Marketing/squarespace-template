@@ -89,6 +89,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This template was built for internal use at Midnight Marketing, LLC. to be a reusable starting point for all new dev mode sites hosted through Squarespace. 
+
 ![Wright (Adapated) Template][screenshot]  
 
   
