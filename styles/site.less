@@ -15,6 +15,15 @@
   @import 'sqs-grid-breaker';
 }
 
+// tweak: { "category": "Site Background", "label" : "Use Background Image", "title" : "tweak-site-use-background-image", "type" : "checkbox", "active" : false, "target" : ".Site-inner" }
+
+// tweak: { "category": "Site Background", "label" : "Background Image", "title" : "tweak-site-background-image", "type" : "image", "target" : ".Site-inner", "showOnlyWhenPresent" : ".tweak-site-use-background-image" }
+.tweak-site-background-image {
+  background-image: url();
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
 // =======================================================
 
