@@ -16,7 +16,7 @@ function formatNumber(number) {
   return NUMBER_FORMATTER.format(number)
 }
 
-// Format numbers in compact [eg. 1K, 2M etc.] (to client local format)
+// Format numbers in compact [eg. 1K, 2.8M, etc.] (to client local format)
 function formatCompactNumber(number) {
   var COMPACT_NUMBER_FORMATTER = new Intl.NumberFormat(undefined, {
     notation: "compact"
@@ -24,7 +24,7 @@ function formatCompactNumber(number) {
   return COMPACT_NUMBER_FORMATTER.format(number)
 }
 
-// Format dates relative [eg. 1 week ago, 4 months from now] (to client local format)
+// Format dates relative [eg. 1 week ago, in 2 months, etc] (to client local format)
 function formatRelativeDate(toDate, fromDate) {
   var DIVISIONS = [
     { amount: 60, name: "seconds" },
