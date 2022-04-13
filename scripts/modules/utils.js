@@ -69,7 +69,7 @@ function subUrlCheck(url) {
 
   p = p.replace(url, "");
 
-  if (p !== "") {
+  if ((p !== "") && (p !== "/")) {
     return true;
   } else {
     return false;
