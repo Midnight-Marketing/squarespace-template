@@ -3,7 +3,7 @@
 // ===============================
 // Format currency (to client local format)
 function formatCurrency(number) {
-  const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
+  var CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
     currency: "USD",
     style: "currency"
   })
@@ -12,13 +12,13 @@ function formatCurrency(number) {
 
 // Format numbers (to client local format)
 function formatNumber(number) {
-  const NUMBER_FORMATTER = new Intl.NumberFormat(undefined)
+  var NUMBER_FORMATTER = new Intl.NumberFormat(undefined)
   return NUMBER_FORMATTER.format(number)
 }
 
 // Format numbers in compact [eg. 1K, 2M etc.] (to client local format)
 function formatCompactNumber(number) {
-  const COMPACT_NUMBER_FORMATTER = new Intl.NumberFormat(undefined, {
+  var COMPACT_NUMBER_FORMATTER = new Intl.NumberFormat(undefined, {
     notation: "compact"
   })
   return COMPACT_NUMBER_FORMATTER.format(number)
@@ -26,7 +26,7 @@ function formatCompactNumber(number) {
 
 // Format dates relative [eg. 1 week ago, 4 months from now] (to client local format)
 function formatRelativeDate(toDate, fromDate) {
-  const DIVISIONS = [
+  var DIVISIONS = [
     { amount: 60, name: "seconds" },
     { amount: 60, name: "minutes" },
     { amount: 24, name: "hours" },
@@ -35,7 +35,7 @@ function formatRelativeDate(toDate, fromDate) {
     { amount: 12, name: "months" },
     { amount: Number.POSITIVE_INFINITY, name: "years" }
   ]
-  const RELATIVE_DATE_FORMATTER = new Intl.RelativeTimeFormat(undefined, {
+  var RELATIVE_DATE_FORMATTER = new Intl.RelativeTimeFormat(undefined, {
     numeric: "auto"
   })
 
@@ -43,10 +43,10 @@ function formatRelativeDate(toDate, fromDate) {
     fromDate = new Date()
   }
 
-  let duration = (toDate - fromDate) / 1000
+  var duration = (toDate - fromDate) / 1000
 
-  for (let i = 0; i <= DIVISIONS.length; i++) {
-    const division = DIVISIONS[i]
+  for (var i = 0; i <= DIVISIONS.length; i++) {
+    var division = DIVISIONS[i]
     if (Math.abs(duration) < division.amount) {
       return RELATIVE_DATE_FORMATTER.format(Math.round(duration), division.name)
     }
