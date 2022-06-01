@@ -1,0 +1,16 @@
+<div class="comp-wrapper">
+  <div class="comp-inner">
+    {# Probably add in another item wrapper for better CSS control}
+    {.repeated section items}
+    <div class="comp-item">
+      <squarespace:query collection="{customContent.reference}" limit="99">
+        {.section collection}
+        <h1 class="comp-item--title">{title}</h1>
+        <img {@|image-meta} />
+        <p class="comp-item--count">{itemCount}</p>
+        {.end}
+      </squarespace:query>
+    </div>
+    {.end}
+  </div>
+</div>

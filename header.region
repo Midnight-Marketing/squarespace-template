@@ -12,6 +12,7 @@
     {@|apply gtmNoscript.block}
 
     <div class="Loader"></div>
+    {@|apply scrolltop.block}
 
     {@|apply mobile.block}
 
