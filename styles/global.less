@@ -1,0 +1,61 @@
+// ============================
+
+//   Generic Settings
+
+// ============================
+body {
+  overflow-y: auto;
+  overflow-x: clip;
+
+  &.is-apple-vendor {
+    overflow-x: initial;
+  }
+}
+
+
+// ============================
+
+//   Mobile Navigation
+
+// ============================
+.Mobile {
+  &-overlay {
+    &-close {
+      padding: 30px;
+
+      // Reverse placement of menu close button so that
+      // it appears overlaid on top of the menu overlay.
+      .tweak-mobile-overlay-slide-origin-right & {
+        left: initial;
+        right: 0;
+        z-index: 4;
+      }
+
+      .tweak-mobile-overlay-slide-origin-left & {
+        right: initial;
+        left: 0;
+        z-index: 4;
+      }
+    }
+
+    &-menu-main {
+      padding-top: 70px; // increase top padding to push down menu items
+    }
+
+    &-nav {
+      &--secondary {
+        .Mobile-overlay-nav-item {
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-bar {
+    &--bottom {
+      .hide;
+    }
+  }
+}
