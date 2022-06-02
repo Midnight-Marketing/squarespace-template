@@ -3,7 +3,8 @@
     {# Probably add in another item wrapper for better CSS control}
     <div class="comp-item-wrapper">
       {.repeated section items}
-      <div class="comp-item">
+      <a href="/{customContent.reference}" class="comp-item">
+        <div class="comp-item--badge"><img {customContent.topLeftImage|image-meta} data-comp-image></div>
         <squarespace:query collection="{customContent.reference}" limit="99">
           {.section collection}
           <h1 class="comp-item--title">{title}</h1>
@@ -11,7 +12,7 @@
           <p class="comp-item--count" data-item-count="{itemCount}">{itemCount} Products</p>
           {.end}
         </squarespace:query>
-      </div>
+      </a>
       {.end}
     </div>
   </div>
