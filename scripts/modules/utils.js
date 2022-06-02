@@ -123,7 +123,5 @@ function scrollToTop() {
         scrollTop: 0
       }, 1500)
   })
-
-
 }
 
