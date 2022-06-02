@@ -1,7 +1,7 @@
 function inits() {
   pluginVideoLightbox()
   imgLoadInit()
-  // compInit()
+  compInit()
 }
 
 function resizeInits() {
