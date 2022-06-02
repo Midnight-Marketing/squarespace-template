@@ -1,0 +1,58 @@
+.anchor {
+  &--top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    .transition(transform 240ms ease-in-out);
+    z-index: 99;
+
+    .hide;
+
+    @media @mobile {
+      .display;
+    }
+
+    &.at-top {
+      .transform(translateY(10vh));
+    }
+  }
+
+  &-button {
+    position: relative;
+    font-size: 30px; // Add tweak
+    line-height: 0;
+    background-color: #fff; // Add tweak
+    color: #000; // Add tweak
+    text-align: center;
+    height: auto;
+    padding: 1em;
+    border-radius: 100%;
+    .border-box;
+    box-shadow: 0 0 30px fade(#000, 8%);
+    .filter(drop-shadow(0 0 20px fade(#000, 20%)));
+    .transition2(background-color 170ms ease-in-out, color 170ms ease-in-out);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #000; // Default color
+      color: #fff; // Default background-color
+    }
+
+    &:focus-visible {
+      background-color: #000; // Default color
+      color: #fff; // Default background-color
+    }
+
+    >* {
+      position: absolute;
+      inset: 0;
+      .flex-parent;
+      .flex-justify-content(center);
+      .flex-align-items(center);
+      .border-box;
+      // Current icon alignment
+      padding-top: 0.2em;
+      padding-left: 0.05em;
+    }
+  }
+}

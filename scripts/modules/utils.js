@@ -105,8 +105,25 @@ function tooltips() {
 }
 
 function scrollToTop() {
-  $('html,body').animate({
-    scrollTop: 0
-  }, 1500)
+  var trigger = $('.anchor-button')
+
+  window.addEventListener('scroll', function () {
+    var wY = window.scrollY
+    var dist = window.innerHeight / 2
+
+    if (wY > dist) {
+      trigger.parent().removeClass('at-top')
+    } else {
+      trigger.parent().addClass('at-top')
+    }
+  })
+
+  trigger.click(function() {
+      $('html,body').animate({
+        scrollTop: 0
+      }, 1500)
+  })
+
+
 }
 

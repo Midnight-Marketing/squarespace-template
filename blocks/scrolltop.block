@@ -1,5 +1,5 @@
-<div id="anchor-top" class="anchor anchor--top">
-  <div class="anchor-button" onclick="scrollToTop()">
+<div id="anchor-top" class="anchor anchor--top at-top">
+  <div class="anchor-button" aria-label="Scroll to top" tabindex="0">
     <i class="fa-regular fa-arrow-up-to-line"></i>
   </div>
 </div>
