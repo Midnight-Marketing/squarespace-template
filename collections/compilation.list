@@ -9,7 +9,7 @@
           {.section collection}
           <h1 class="comp-item--title">{title}</h1>
           <img class="comp-item--image" {mainImage|image-meta} data-comp-image />
-          <p class="comp-item--count" data-item-count="{itemCount}">{itemCount} Products</p>
+          <p class="comp-item--count" data-item-count="{itemCount}">{itemCount} Product{itemCount|pluralize}</p>
           {.end}
         </squarespace:query>
       </a>
