@@ -76,6 +76,7 @@
         <li><a href="#install-on-an-existing-site">Install on an Existing Site</a></li>
       </ul>
     </li>
+    <li><a href="#additional-notes">Additional Notes</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -164,6 +165,13 @@ To get a local copy up and running follow these simple steps.
    * Please note you will need access to the Squarespace site in order to complete this step. If needed, please contact <a href="mailto:nathan@midnightmarketing.com" target="_blank">the main developer</a>.
 
 
+<!-- ADDITIONAL NOTES -->
+## Additional Notes
+
+For the standardized use of the scroll to top button, please follow these guidelines:
+
+- If the button style of the site is round edged, use a circular or matched round edged for scroll button  
+- If the site buttons are sharp edged, then use a sharp edged scroll button  
 
 <!-- ROADMAP -->
 ## Roadmap
