@@ -1,3 +1,28 @@
+/* ----- TWEAKS ----- */
+// =======================================================
+
+//    Scroll to Top
+
+// =======================================================
+
+// tweak: { "category" : "Scroll to Top", "label" : "Show Button", "title" : "tweak-scroll-to-top-show", "type" : "checkbox", "active" : true, "target" : ".anchor--top" }
+
+// tweak: { "category" : "Scroll to Top", "label" : "Mobile Only", "title" : "tweak-scroll-to-top-mobile-only", "type" : "checkbox", "active" : true, "target" : ".anchor--top", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+
+// tweak: { "category" : "Scroll to Top", "label" : "Icon Size", "title" : "tweak-scroll-to-top-icon-size", "type" : "value", "min" : 10, "max" : 50, "step" : 1, "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-icon-size: 30px;
+
+// tweak: { "category" : "Scroll to Top", "label" : "Icon Color", "title" : "tweak-scroll-to-top-icon-color", "type" : "color", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-icon-color: #000;
+
+// tweak: { "category" : "Scroll to Top", "label" : "Background Color", "title" : "tweak-scroll-to-top-background-color", "type" : "color", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-background-color: #fff;
+
+// tweak: { "category" : "Scroll to Top", "label" : "Rounded Corners", "title" : "tweak-scroll-to-top-rounded-corners", "type" : "value", "min" : 0, "max" : 100, "step" : 10, "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-rounded-corners: 100%;
+
+
+/* ----- STYLES ----- */
 .anchor {
   &--top {
     position: fixed;
@@ -6,10 +31,16 @@
     .transition(transform 240ms ease-in-out);
     z-index: 99;
 
-    .hide;
+    .hide; // Hide by default
+
+    .tweak-scroll-to-top-show:not(.tweak-scroll-to-top-mobile-only) & {
+      .display; // Show at all times if not mobile-only
+    }
 
     @media @mobile {
-      .display;
+      .tweak-scroll-to-top-show & {
+        .display; // Show on mobile
+      }
     }
 
     &.at-top {
@@ -19,14 +50,14 @@
 
   &-button {
     position: relative;
-    font-size: 30px; // Add tweak
+    font-size: @tweak-scroll-to-top-icon-size;
     line-height: 0;
-    background-color: #fff; // Add tweak
-    color: #000; // Add tweak
+    background-color: @tweak-scroll-to-top-background-color;
+    color: @tweak-scroll-to-top-icon-color;
     text-align: center;
     height: auto;
     padding: 1em;
-    border-radius: 100%;
+    border-radius: @tweak-scroll-to-top-rounded-corners;
     .border-box;
     box-shadow: 0 0 20px fade(#000, 20%);
     .transition2(background-color 170ms ease-in-out, color 170ms ease-in-out);
