@@ -18,6 +18,12 @@
 // tweak: { "category" : "Scroll to Top", "label" : "Background Color", "title" : "tweak-scroll-to-top-background-color", "type" : "color", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
 @tweak-scroll-to-top-background-color: #fff;
 
+// tweak: { "category" : "Scroll to Top", "label" : "Icon Hover Color", "title" : "tweak-scroll-to-top-icon-hover-color", "type" : "color", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-icon-hover-color: #fff;
+
+// tweak: { "category" : "Scroll to Top", "label" : "Background Hover Color", "title" : "tweak-scroll-to-top-background-hover-color", "type" : "color", "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
+@tweak-scroll-to-top-background-hover-color: #000;
+
 // tweak: { "category" : "Scroll to Top", "label" : "Rounded Corners", "title" : "tweak-scroll-to-top-rounded-corners", "type" : "value", "min" : 0, "max" : 100, "step" : 10, "showOnlyWhenPresent" : ".tweak-scroll-to-top-show" }
 @tweak-scroll-to-top-rounded-corners: 100%;
 
@@ -64,13 +70,13 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #000; // Default color
-      color: #fff; // Default background-color
+      background-color: @tweak-scroll-to-top-background-hover-color;
+      color: @tweak-scroll-to-top-icon-hover-color;
     }
 
     &:focus-visible {
-      background-color: #000; // Default color
-      color: #fff; // Default background-color
+      background-color: @tweak-scroll-to-top-background-hover-color;
+      color: @tweak-scroll-to-top-icon-hover-color;
     }
 
     >.fa-regular,

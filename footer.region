@@ -14,7 +14,6 @@
     {# Combined Scripts - will be combined by SS into a single file }
     <squarespace:script src="modules/utils.js" combo="true" />
     <squarespace:script src="modules/image-loading.js" combo="true" />
-    <squarespace:script src="modules/compilation.js" combo="true" />
     <squarespace:script src="inits.js" combo="true" />
 
     {squarespace-footers}

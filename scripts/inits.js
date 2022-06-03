@@ -2,7 +2,6 @@ function inits() {
   scrollToTop()
   pluginVideoLightbox()
   imgLoadInit()
-  compInit()
 }
 
 function resizeInits() {
