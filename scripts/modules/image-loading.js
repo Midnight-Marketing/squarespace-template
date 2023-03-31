@@ -32,3 +32,10 @@ function reloadCustomImages(prop) {
     })
   }
 }
+
+function loadFlickImg() {
+  var images = document.querySelectorAll('.flickity-slider img[data-src]')
+  for (var i = 0; i < images.length; i++) {
+    ImageLoader.load(images[i], {load: true})
+  }
+}
